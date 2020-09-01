@@ -42,7 +42,7 @@ const RestaurantPage = () => {
   };
 
   const getRating = () => {
-    if (!user) return;
+    if (!user) return 0;
 
     const rating = restaurant && restaurant.ratings.find((r) => r.username === user.username);
     return (rating && rating.rate) || 0;
